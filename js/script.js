@@ -7,7 +7,7 @@ console.log(str.slice(0, 10));
 console.log(str.toUpperCase());
 console.log(str.toLowerCase());
 // .toCharAt(int x)
-console.log(str.str.charAt());
+console.log(str.charAt());
 console.log(str.charAt(11));
 console.log(str.charAt(14));
 console.log(str.charAt(110));
