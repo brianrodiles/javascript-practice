@@ -1,57 +1,21 @@
-let firstName = prompt("Please enter your first name:");
-let lastName = prompt("Please enter your last name:");
-console.log("This is your first name: " + firstName.toUpperCase());
-alert("This is your last name: " + lastName.toLowerCase());
+if(0 == false && 1 == true){
+    console.log("Comparing using general equals comparison.");
+}
+if(0 === false && 1 === true){
+    console.log("Comparing using strict comparison");
+}
+if(false != false && true != true){
+    console.log("Comparing using general not");
+}
+if(true !== false && false !== true){
+    console.log("Comparing using strict not");
+}
+// The debugger; is only used when wanting to stop the flow of a program
+// for debugging purposes.
+// debugger;
+if(1 != false && 0 != true){
+    console.log("Comparing using general not");
+}
 
-function getUserBirth(){
-    let userBirth = prompt("Please enter your birthday in form mm/dd/yyyy:");
-    if(userBirth == null){
-        alert("Thanks for using the birthday service!")
-        throw new Error();
-    }
-    if(userBirth.length != 10 || userBirth.charAt(2) != '/' || userBirth.charAt(5) != '/'){
-            alert("Bad input!");
-            return getUserBirth();
-    }
-
-    for(let i = 0; i < 10; i++){
-        if(i == 2 || i == 5){
-            i++;
-        }
-        if(isNaN(userBirth.charAt(i))){
-            alert("Bad input!");
-            return getUserBirth();
-        }
-    }
-    
-    let userPreference = "";
-    let question = "So, is your birthday really on " + userBirth + "?";
-    let i = 0;
-    while(userPreference != "Yes"){
-        if(confirm(question) == true){
-            userPreference = "Yes";
-        }
-        else{
-            userPreference = "No";
-        }
-        if(userPreference == "No" && i % 2 == 0){
-            question = "";
-            question = "Are you kidding me?\n" + "So, is your birthday really on " + userBirth + "?";
-        }
-        if(userPreference == "No" && i % 2 != 0){
-            question = "";
-            question = "Be honest with me.\n" + "So, is your birthday really on " + userBirth + "?";
-        }
-        if(i == 5){
-            return getUserBirth();
-        }
-        i++;
-    }
-    return userBirth
-}
-try{
-    alert("Nice, I will assume your birthday is on " + getUserBirth() + ".");
-}
-catch(e){
-    
-}
+// What can be compared with a false:
+// false, empty String, 0, null, NaN, undefined
