@@ -64,6 +64,7 @@ const greeting = message => "Greeting: " + message.toUpperCase();
 // No need of return statement when using single-lined arrow functions
 // IMPORTANT: Keyword this can't be used in an arrow function (i.e. this.message.toUpperCase()).
 // Think it as, I AM THE EXPRESSION, I AM THE "THIS";
+// However, it may work if we bind.
 // For more info: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
 console.log(greeting("Hello World!"))
 
