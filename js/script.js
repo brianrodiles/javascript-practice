@@ -1,67 +1,9 @@
-// ========================= EXAMPLE 1 =========================
-function job() {
-    return new Promise(function(resolve, reject) {
-        reject();
-    });
-}
+// let url = 'http://api.open-notify.org/astros.json';
+// let result1 = fetch(url).then(response => response.json()).then(data => console.log("Here is the data: ", data));
+// let result2 = fetch(url).then(response => response.json()).then(data => console.log(data.people.filter(name => console.log("name", name))));
+// let result3 = fetch(url).then(response => response.json()).then(data => console.log(data.people.filter(name => console.log("name", name.name))));
 
-let promise1 = job();
-
-promise1
-
-.then(function() {
-    console.log('Success 1');
-})
-
-.then(function() {
-    console.log('Success 2');
-})
-
-.then(function() {
-    console.log('Success 3');
-})
-
-.catch(function() {
-    console.log('Error 1');
-})
-
-.then(function() {
-    console.log('Success 4');
-});
-
-// ========================= EXAMPLE 2 =========================
-function job(state) {
-    return new Promise(function(resolve, reject) {
-        if (state) {
-            resolve('success');
-        } else {
-            reject('error');
-        }
-    });
-}
-
-let promise2 = job(true);
-
-promise2
-
-.then(function(data) {
-    console.log(data);
-
-    return job(false);
-})
-
-.catch(function(error) {
-    console.log(error);
-
-    return 'Error caught';
-})
-
-.then(function(data) {
-    console.log(data);
-
-    return job(true);
-})
-
-.catch(function(error) {
-    console.log(error);
-});
+// JSON ==> JavaScript Object Notation
+let catUrl = 'https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1';
+let catResult = fetch(catUrl).then(response => response.json()).then(data => console.log("Here is the cat fact data: ", data));
+let catFact = fetch(catUrl).then(response => response.json()).then(data => alert(`Here is a new fact about cats:\n${data.text}`));
