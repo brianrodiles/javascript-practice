@@ -10,7 +10,7 @@ let catFact = fetch(catUrl).then(response => response.json()).then(data => alert
 
 // Extra (during review):
 // You can use POSTMAN to see what will be returned on a GET call before fetching.
-// You can also use node
+// You can also use node: https://nodejs.org/en/ to download it
 // > node // to start node
 // > .exit // to exit node
 
