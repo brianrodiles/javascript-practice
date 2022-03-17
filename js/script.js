@@ -1,9 +1,15 @@
-// let url = 'http://api.open-notify.org/astros.json';
-// let result1 = fetch(url).then(response => response.json()).then(data => console.log("Here is the data: ", data));
-// let result2 = fetch(url).then(response => response.json()).then(data => console.log(data.people.filter(name => console.log("name", name))));
-// let result3 = fetch(url).then(response => response.json()).then(data => console.log(data.people.filter(name => console.log("name", name.name))));
+// DOM (Document Object Model)
+// Object based represenation of a website (it is a tree-based model)
+// Document
+// HTML
+// Head | Body
+// Title | H1, P, UL
+// - | -, -, L1, L1
 
-// JSON ==> JavaScript Object Notation
+// Element nodes are the ones that are tags
+// .createElement() creates another element node
+// .appendChild() allows you to append elements to a site
+// .addEventListener() allows you to perform actions depending on the user's actions
 function alertCatFact(){
     let catUrl = 'https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1';
     let catResult = fetch(catUrl).then(response => response.json()).then(data => console.log("Here is the cat fact data: ", data));
@@ -20,17 +26,3 @@ function mOut(obj){
 document.getElementById("catFactBtn").addEventListener("click", alertCatFact);
 document.getElementById("catFactBtn").addEventListener("mouseover", function(){document.getElementById("catFactBtn").innerHTML = "Click me!";});
 document.getElementById("catFactBtn").addEventListener("mouseout", function(){document.getElementById("catFactBtn").innerHTML = "Get another fact about cats!";});
-
-
-// Extra (during review):
-// You can use POSTMAN to see what will be returned on a GET call before fetching.
-// You can also use node: https://nodejs.org/en/ to download it
-// > node // to start node
-// > .exit // to exit node
-
-// The following script is for to get a random item from the page
-// > node --experimental-fetch // to perform an experimental node
-// > let response = await fetch("https://cat-fact.herokuapp.com/facts")
-// > let data = await response.json()
-// > let random_item = Math.floor(Math.random() * data.length)
-// > data[random_item]
