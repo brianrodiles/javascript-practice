@@ -56,5 +56,31 @@ for(let i = 1; i < newArray.length; ++i){
 console.log(newArray);
 
 // Loops
+// for...in iterates over all enumerable properties of an object.
+const book = {
+    title: 'JavaScript for Beginners',
+    price: '$9.99',
+    year: 2018,
+    publisher: 'Amazon, Inc'
+}
 
+for(const key in book){
+    console.log(`${key} --> ${book[key]}`);
+}
 
+// for...of iterates over arrays and other data structures, but not over objects.
+const names = ['Alex', 'Emma', 'Atta'];
+for(const name of names){
+    console.log(`Hey ${name}!`)
+}
+
+// Use break; to stop the flow of a loop
+let i = 0;
+while(i < 6){
+    if(i === 3){
+        break;
+    }
+    ++i;
+}
+
+console.log(i);
