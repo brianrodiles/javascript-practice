@@ -13,8 +13,8 @@ const dog = {
     "code":code(),
 };
 
-console.log(dog.name);
-console.log(dog.numLegs);
-console.log(dog.furColor);
+document.getElementById("name").innerHTML = dog.name;
+document.getElementById("numLegs").innerHTML = dog.numLegs;
+document.getElementById("furColor").innerHTML = dog.furColor;
 dog.speak;
 dog.code;
