@@ -1,28 +1,92 @@
-// DOM (Document Object Model)
-// Object based represenation of a website (it is a tree-based model)
-// Document
-// HTML
-// Head | Body
-// Title | H1, P, UL
-// - | -, -, L1, L1
+// Objects (as JS is a object-based programming language)
+// JS Objects have properties and methods
+// In JS arrays are objects, with, e.g., the property length.
+// JS Objects allows to store data in key value pairs or property value pairs.
+const objVacation = {
+    // Any type of data can be used as value
+    "place":"Yosemite",
+    "days":5,
+    "transportation":"car"
+};
+const firstLetter = "a";
+const dictionary = {
+    "a":["Apple","Attitude","Azalea"],
+    "b":["Baby","Bitter","Best"],
+    "c":["Cat","Cowgirl","Curly"]
+};
+// Accesing object properties
+// Bracket notation
+let daysOnVacation = objVacation["days"];
+console.log(`Duration of trip: ${daysOnVacation} days.`);
+// Variable method
+console.log(`Contents of "a": ${dictionary[firstLetter]}`);
+// Dot notation
+console.log(`Way of transportation: ${objVacation.transportation}.`);
 
-// Element nodes are the ones that are tags
-// .createElement() creates another element node
-// .appendChild() allows you to append elements to a site
-// .addEventListener() allows you to perform actions depending on the user's actions
-function alertCatFact(){
-    let catUrl = 'https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1';
-    let catResult = fetch(catUrl).then(response => response.json()).then(data => console.log("Here is the cat fact data: ", data));
-    let catFact = fetch(catUrl).then(response => response.json()).then(data => alert(`Here is a new fact about cats:\n${data.text}`));
-}
-function mOver(obj){
-    obj.innerHTML = "Click me!";
-}
+// Changing object properties
+daysOnVacation = objVacation.days = 6;
+console.log(`New duration of trip: ${daysOnVacation} days.`);
 
-function mOut(obj){
-    obj.innerHTML = "Get a fact about cats!";
-}
+// Delete Object Properties
+delete dictionary.c;
 
-document.getElementById("catFactBtn").addEventListener("click", alertCatFact);
-document.getElementById("catFactBtn").addEventListener("mouseover", function(){document.getElementById("catFactBtn").innerHTML = "Click me!";});
-document.getElementById("catFactBtn").addEventListener("mouseout", function(){document.getElementById("catFactBtn").innerHTML = "Get another fact about cats!";});
+// Checking if a Property is an object
+console.log(objVacation.hasOwnProperty("place"));
+console.log(objVacation.hasOwnProperty("weather"));
+
+// Complex Objects
+// * When an object contains more than one data type.
+// * When a variable contains more than one object.
+
+const myFaveBooks = [
+    {
+        "title":"The Secret Life of Bees",
+        "author":"Sue Monk Kid",
+        "pubDate":2001,
+        "Genre":"Fiction"
+    },
+    {
+        "title":"Rubyfruit Jungle",
+        "author":"Rita Mae Brown",
+        "pubDate":1973,
+        "Genre":"Fiction"
+    }
+]
+
+const myFaveMusic = [
+    {
+        "albumTitle":"Into the Trees",
+        "musician":"Zoe Keating",
+        "releaseDate":2010,
+        "songs":["Forest","Escape Artist","Optimist"]
+    }
+]
+
+const myNestedFaveMusic = [
+    {
+        "albumTitle":"Into the Trees",
+        "musician":"Zoe Keating",
+        "releaseDate":2010,
+        "songs":{
+                    "Forest":{
+                        "Length":"2:07",
+                        "Instruments":"Cello"
+                    },
+                    "Into the Trees":{
+                        "Length":"3:15",
+                        "Instruments":"Cello"
+                    }
+        }
+    }
+]
+
+console.log(myNestedFaveMusic[0]["songs"]["Forest"]);
+
+const myFaveAlbums = {
+    "Into the Trees":{"musician":"Zoe Keating",
+                      "songs":["Into the Trees","Forest","Optimist"]},
+    "Oops! I Did It Again":{"musician":"Britney Spears",
+                            "songs":["Oops! I Did It Again","Sodapop"]},
+};
+
+console.log(myFaveAlbums["Into the Trees"]["songs"][0]);
