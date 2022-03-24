@@ -1,23 +1,19 @@
-const userName = document.getElementById('userName');
-const psswd = document.getElementById('psswd');
-const form = document.getElementById('form');
-const errorMessage = document.getElementById('errorMessage');
+const question = document.getElementById("question");
+const form = document.getElementById("form");
+const errorMessage = document.getElementById("errorMessage");
 
 form.addEventListener('submit', (e) => {
-    let message = '';
-    if(userName.value === '' || userName.value == null){
-        message = 'Please fill out all the fields on the form.';
-    }
-    else if(psswd.value === '' || psswd.value == null){
-        message = 'Please fill out all the fields on the form.';
-    }
-    else if(userName.value !== 'admin' || psswd.value !== '132'){
-        message = 'Incorrect credentials, please try again.';
+    let error = '';
+    if(question.value === '' || question.value == null){
+        error = 'Please ask me something.'
     }
     e.preventDefault();
-    errorMessage.innerText = message;
+    errorMessage.innerText = error;
     if(errorMessage.innerText == ''){
-        document.getElementById('form').hidden = true;
-        document.getElementById('infoDisp').innerText = "Nice, remember that...\nyour username is [" + document.getElementById('userName').value + "],\n" + "and your password is [" + document.getElementById('psswd').value + "]."
+        const newItem = document.createElement('p');
+        newItem.style.cssText = 'font-size: 25px;';
+        newItem.innerHTML = question.value;
+        form.parentNode.replaceChild(newItem, form);
+        document.getElementById('answers').innerText = 'Yes!'
     }
 })

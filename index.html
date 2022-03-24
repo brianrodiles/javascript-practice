@@ -10,22 +10,17 @@
 </head>
 <body>
     <main>
-        <p>Sign in Form</p>
+        <h1>Magic 8 Ball</h1>
         <div id = "errorMessage"></div>
         <form action="/" method="GET" id = "form">
             <div>
-                <label for = "userName">Username:</label>
-                <input type = "text" id = "userName" name = "userName">
+                <label for = "question">Ask me anything!<br></label>
+                <input type = "question" id = "question" name = "question">
             </div>
-            <div>
-                <label for = "psswd">Password:</label>
-                <input type = "text" id = "psswd" name = "psswd">
-            </div>
-            <input type = "submit" value = "Log in">
+            <input type = "submit" value = "Ask">
         </form>
-        <p id = "infoDisp"></p>
-        
+        <div id = "answers"></div>
     </main>
-    <script defer src = "js/script.js"></script>
+    <script src = "js/script.js"></script>
 </body>
 </html>
