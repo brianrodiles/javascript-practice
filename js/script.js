@@ -24,6 +24,18 @@ const car = [
         "color":"blue"
     }
 ]
+// class Car{
+//     constructor(make, model, year, color){
+//         this.make = make;
+//         this.model = model;
+//         this.year = year;
+//         this.color = color;
+//     }
+
+//     honk(){
+//         alert(this.make + ' ' + this.model + ' says: beep beep!');
+//     }
+// }
 
 console.log("Info about cars:");
 for(let i = 0; i < 4; i++){
