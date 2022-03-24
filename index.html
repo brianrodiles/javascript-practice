@@ -10,9 +10,22 @@
 </head>
 <body>
     <main>
-        <h1>Hello this is my JavaScript Review Page</h1>
-        <p>JavaScript is so cool!</p>
+        <p>Sign in Form</p>
+        <div id = "errorMessage"></div>
+        <form action="/" method="GET" id = "form">
+            <div>
+                <label for = "userName">Username:</label>
+                <input type = "text" id = "userName" name = "userName">
+            </div>
+            <div>
+                <label for = "psswd">Password:</label>
+                <input type = "text" id = "psswd" name = "psswd">
+            </div>
+            <input type = "submit" value = "Log in">
+        </form>
+        <p id = "infoDisp"></p>
+        
     </main>
-    <script src = "js/script.js"></script>
+    <script defer src = "js/script.js"></script>
 </body>
 </html>
