@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--Remember to link to see live changes on local.-->
+    <link rel="stylesheet" href="css/style.css" rel = "stylesheet">
+    <title>JavaScript Review</title>
 </head>
 <body>
-    <script src = "js/script.js"></script>;
+    <main>
+        <p>Sign in Form</p>
+        <div id = "errorMessage"></div>
+        <form action="/" method="GET" id = "form">
+            <div>
+                <label for = "userName">Username:</label>
+                <input type = "text" id = "userName" name = "userName">
+            </div>
+            <div>
+                <label for = "psswd">Password:</label>
+                <input type = "text" id = "psswd" name = "psswd">
+            </div>
+            <input type = "submit" value = "Log in">
+        </form>
+        <p id = "infoDisp"></p>
+        
+    </main>
+    <script defer src = "js/script.js"></script>
 </body>
 </html>
