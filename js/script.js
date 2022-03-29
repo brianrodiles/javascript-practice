@@ -1,7 +1,13 @@
+let audio = new Audio('/chill.mp3');
+audio.volume = 0.5;
+audio.play();
+
 const userName = document.getElementById('userName');
 const psswd = document.getElementById('psswd');
 const form = document.getElementById('form');
 const errorMessage = document.getElementById('errorMessage');
+
+// document.getElementById('button').disabled = true;
 
 form.addEventListener('submit', (e) => {
     let message = '';

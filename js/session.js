@@ -1,3 +1,7 @@
+let audio = new Audio('/puvlo.mp3');
+audio.volume = 0.5;
+audio.play();
+
 document.getElementById('greeting').innerText += " " + localStorage.getItem("user") + "!";
 let count = 3;
 setInterval(() => {
