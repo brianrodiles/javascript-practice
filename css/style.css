@@ -1,16 +1,20 @@
 body{
     color: #fff;
-    background-color: dodgerblue;
-    font-family: helvetica;
+    background-image: url("/fTBack.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: relative;
+    background-color: #1c1c1c;
+    font-family: garamond;
 }
 h1{
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     position: relative;
 }
 
 p{
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -23,4 +27,19 @@ form{
     font-size: 18px;
     text-align: center;
     position: relative;
+}
+
+span.a{
+    text-align: center;
+    display: inline;
+}
+
+input{
+    background-color: #1c1c1c;
+    color: #63c328;
+}
+
+button{
+    background-color: #1c1c1c;
+    color: #63c328;
 }

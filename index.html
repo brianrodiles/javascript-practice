@@ -14,12 +14,25 @@
         <div id = "errorMessage"></div>
         <form action="/" method="GET" id = "form">
             <div>
-                <label for = "question">Ask me anything!<br></label>
+                <label for = "question">Ask me anything!<br><br></label>
                 <input type = "question" id = "question" name = "question">
             </div>
+            <br>
             <input type = "submit" value = "Ask">
         </form>
-        <div id = "answers"></div>
+        <br>
+        <div id = "answers"><img src = "/dynImages/mBS.png" alt = "magicBall" 
+            id = "magicImage" width = "290" height = "290" style = "opacity: 1;"></div>
+        <p id = "message" hidden = true>Would you like to test your fortune again?</p>
+        <div>
+            <span class = "a">
+                <button type = "button" id = "yes" hidden = true>Yes</button>
+            </span>
+            <span class = "a">    
+                <button type = "button" id = "no" hidden = true>No</button>
+            </span>
+        </div>
+        <p id = "redirectInfo"><p id = "redirectCounter"></p></p>
     </main>
     <script type = "module" src = "js/script.js"></script>
 </body>
