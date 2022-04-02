@@ -1,9 +1,14 @@
 body{
     color: #fff;
-    background-image: url("/fTBack.jpg");
+    background: url("/fTBack.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background-image: url("/fTBack.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position: relative;
+    background-size: 100% 100%;
+    background-position: center center; */
     background-color: #1c1c1c;
     font-family: garamond;
 }
