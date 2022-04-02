@@ -1,7 +1,7 @@
 let audio = new Audio('/backgroundSong.mp3');
 audio.volume = 0.5;
 audio.loop = true;
-audio.play();
+audio.autoplay = true;
 
 
 const question = document.getElementById("question");
@@ -53,6 +53,9 @@ form.addEventListener('submit', (e) => {
     if(question.value === '' || question.value == null){
         error = 'Please ask me something.'
     }
+    else if(question.value.charAt(question.value.length - 1) != '?'){
+        error = 'Are you sure that\'s a question? Add a question mark please.'
+    }
     e.preventDefault();
     errorMessage.innerText = error;
     if(errorMessage.innerText == ''){
@@ -102,6 +105,6 @@ function goingToGoogle(){
         setInterval(() => {
             counter.innerText = count;
             count--;
-            if(count <= 0) location.replace('https://www.google.com/');
+            if(count <= 0) location.replace('https://giphy.com/gifs/bones-season-9-monday-night-6eQYX4B4OGjBK/fullscreen');
         }, 1000)
 }
